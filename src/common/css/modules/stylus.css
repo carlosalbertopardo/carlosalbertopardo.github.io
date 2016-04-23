@@ -1,0 +1,172 @@
+/* =============================================================================
+   CONFIG - Master configuration file for the stylus module
+============================================================================= */
+/* 	Here you load all the stylus files you want to use on the app.
+	Any files loaded into the css should be called from here
+	Files are written out in the order they are imported
+*/
+/* Stylus files for all the site */
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+.two-col-layout .first-col,
+.two-col-layout .second-col {
+  width: 50%;
+}
+.two-col-layout .first-col {
+  float: left;
+}
+.two-col-layout .second-col {
+  float: right;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.tab-component {
+  position: relative;
+  margin: 25px 0;
+}
+.tab-component .tab-section {
+  float: left;
+  padding: 0;
+  border: 0;
+  margin-right: 10px;
+}
+.tab-component .tab-section:hover {
+  background-color: #fff;
+}
+.tab-component .tab-section label {
+  background: #eee;
+  padding: 10px;
+  position: relative;
+  top: 2px;
+  border: 1px solid $border_grey;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.tab-component .tab-section label:hover {
+  cursor: pointer;
+  background-color: $border_grey;
+}
+.tab-component .tab-section input[type="radio"] {
+  display: none;
+}
+.tab-component .tab-section input[type="radio"]:checked ~ label {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 2;
+}
+.tab-component .tab-section input[type="radio"]:checked ~ label ~ .panel {
+  display: block;
+}
+.tab-component .tab-section .panel {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 28px;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.questions h5 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.questions .question {
+  color: $font_lightblue;
+}
+.questions .answer {
+  color: $font_green;
+}
+@media screen and (max-width: 959px) {
+  .container {
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .tab-component .tab-section {
+    width: 30%;
+  }
+  .tab-component .tab-section label {
+    white-space: nowrap;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 2.3em;
+  margin-bottom: 20px;
+}
+h3,
+h4 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+legend {
+  font-size: 0.8em;
+}
+/* Stylus file for particular pages */
+.product-detail {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+}
+.product-detail .two-col-layout .second-col {
+  width: 45%;
+}
+.product-detail .shop-form {
+  margin-bottom: 20px;
+}
+.product-detail .shop-form label {
+  text-align: left;
+  width: 55px;
+}
+.product-detail .shop-form legend {
+  padding-top: 10px;
+}
+.product-detail .price {
+  font-size: 2.8em;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.product-detail .price sup {
+  font-size: 0.5em;
+  line-height: 35px;
+}
+.product-detail .product-carousel figure {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .product-detail .two-col-layout .first-col,
+  .product-detail .two-col-layout .second-col {
+    float: none;
+    width: 100%;
+  }
+}
