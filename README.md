@@ -12,5 +12,5 @@
 			<li>Imagenes</li>
 		</ul>
 	</li>
-	<li>URL: carlosalbertopardo.github.io/gh-pages</li>
+	<li>URL: <a href="http://carlosalbertopardo.github.io/gh-pages">carlosalbertopardo.github.io/gh-pages</li>
 </ul>
