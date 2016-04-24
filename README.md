@@ -52,16 +52,6 @@
 	<li>Las tabs funcionan solo con css, tratando de evitar :target para viejos browsers. Se utilizaron roles y  states de WAI-ARIA para esta sección, pero no se manejó su funcionamiento con los tags para no utilizar js.</li>
 	<li>Se utilizó microdata para la sección del producto.</li>
 	<li>Se utilizaron las versiones minificadas de chico.js y chico.css. Fueron concatenadas en el app.min.css y app.min.js</li>
-	<li>
-		Se separaron las imagenes en 2 carpetas separadas
-		<ul>
-			<li>common:	para los iconos que serían comunes a todo el sitio</li>
-			<li>locale-assets: para las imagenes especificas de cada pag (si se quiziera extender)</li>
-		</ul>
-	</li>
-	<li>
-		El Carousel se llama utilizando chico i se inicializa desde el js, pero se podría implementar un component dispatcher para llamarlo desde el html para no utilizar la clase en la función.
-	</li>
 	<li>Se minificó el html final</li>
 	<li>Testeado en Chrome, firefox e IE9.</li>
 </ul>
