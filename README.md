@@ -12,5 +12,5 @@
 			<li>Imagenes</li>
 		</ul>
 	</li>
-	<li>URL: <a href="http://carlosalbertopardo.github.io/front-end-test-ml">carlosalbertopardo.github.io/gh-pages</li>
+	<li>URL: <a href="http://carlosalbertopardo.github.io/front-end-test-ml">carlosalbertopardo.github.io/front-end-test-ml</li>
 </ul>
