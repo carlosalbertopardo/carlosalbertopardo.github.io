@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Display y Alineación de HTML</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1 class="title">Display y Alineación de HTML</h1>
+				<p class="subtitle">Introducción a la alineación básica de elementos HTML</p>
+			</header>
+			<section>
+				<h2>Display de elementos</h2>
+				<p>Antes de hablar de alineación tenemos que tener en cuenta los 3 tipos de elementos de html mas importantes en cuanto a como se muestran: Los elementos en bloque, los elementos en línea y su fusión inline-block</p>
+				<article>
+					<h3>Elementos de tipo "block"</h3>
+					<ul>
+						<li>Ocupan todo su contenedor y se apilan uno sobre el otro </li>
+						<li>La altura varía dependiendo de su contenido</li>
+						<li>Pueden contener dentro otros elementos "block" o "inline"</li>
+						<li>Se puede modificar el ancho y el alto por CSS</li>
+						<li>Algunos de los elementos en bloque mas utilizados son los div, p h1, h2, h3, h4, h5, ul, ol y li</li>
+					</ul>
+				</article>
+				<article>
+					<h3>Elementos de tipo "inline"</h3>
+					<ul>
+						<li>Se posicionan horizontalmente uno al lado del otro.</li>
+						<li>No ocupan todo el ancho de su contenedor padre</li>
+						<li>Solo pueden contener elementos de tipo inline dentro</li>
+						<li>No se puede modificar el ancho y el alto por css</li>
+						<li>Algunos de los elementos en bloque mas utilizados son los a, span, input, button, textarea</li>
+					</ul>
+				</article>
+				<article>
+					<h3>Elementos de tipo "inline-block"</h3>
+					<p>Tenemos un tercer tipo de elemento que es llamado 'inline-block', el cual es una combinacion de las propiedades de los anteriores</p>
+					<ul>
+						<li>Sigue el flujo del texto como los elementos inline</li>
+						<li>Se puede modificar el tamaño con CSS</li>
+						<li>Las imagenes se comportan de esta manera</li>
+					</ul>
+				</article>									
+			</section>
+			<section>
+				<h2>Alineación de elementos</h2>
+				<p>Como ya mencionamos hay diferentes "tipos" de elementos HTML, y por cada uno de los ellos vamos a tener que tener en cuenta que por las propiedades de cada uno, no responden a los estilos de la misma forma. Por este motivo, para centrarlos recurriremos a distintos metodos para distintos tipos</p>
+				<article>
+					<h3>Centrado de elementos en bloque</h3>
+					<h4>Uso de la propiedad align:center</h4>
+					<p>Para el centrado de un elemento en bloque (y los elementos dentro de él), podemos utilizar la propiedad "text-align:center". En este caso se la asignamos a la clase "align-center". Esta propiedad sirve para centrar texto o elementos dentro del tag.</p>
+					<div class="example">
+						<p>Para un solo elemento en bloque</p>
+						<div class="align-center" >Esto es un text en bloque centrado</div>	
+					</div>
+					<h4>Uso de la propiedad margin:0 auto</h4>
+					<p>Una de las caracteristicas del elemento de bloque es precisamente que puedo modificar su ancho y su alto con css. En el caso de que yo redujeta el tamaño del bloque para que no ocupe toda la pantalla, puedo entrarla en la misma utilizando la propiedad "margin". Avisandole a la caja que los margenes de la izquierda y de la derecha son automáticos, puedo centrar el bloque en la pagina (o su contenedor padre):</p>
+					<div class="example">
+						<p>Reducimos el tamaño del bloque a 200px y lo centramos con la propiedad "margin-left: auto; margin-right:auto"</p>
+						<div class="centered-block">Esto es un bloque</div>
+					</div>
+				</article>
+				<article>
+					<h3>Centrado elementos en línea</h3>
+					<p>Los elementos en línea no son afectados por la propiedad margin auto, por lo cual tenemos que recurrir a otros métodos para centrarlos.</p>
+					<div class="example">
+						<p>Podemos incluir al elemento en línea que queramos centrar dentro de un bloque y utilizar la propiedad align-center en el contenedor padre:</p>
+						<div class="align-center">
+							<span>Esto es un elemento en línea</span>	
+						</div>
+						<p>Si ponemos varios elementos en línea dentro de un contenedor con align-center, se apilarán horizontalmente pero centrados</p>
+						<div class="align-center">
+							<span>esto es un span</span>
+							<span> // </span>
+							<span>esto es otro span</span>
+						</div>
+					</div>
+				</article>
+				<article>
+					<h3>Centrado elementos inline-block</h3>
+					<p>Uno de los elementos inline-block por excelencia son las imagenes. Los tags img se comporta como un elemento inline, pero ademas se puede modificar su ancho y su alto con CSS. Por comportarse como un estilo inline, no podremos aplicar el centrado con margin, pero se centrará si tenemos un padre con text-align:center</p>
+					<div class="example">
+						<h3>Usando margenes automáticos no funciona</h3>
+						<img class="center-auto" src="img/legend-of-zelda-1.png">
+					</div>
+					<div class="example">
+						<h3>Si colocamos la imagen en un contenedor con align-center:</h3>
+						<div class="align-center">
+							<img class="center-auto" src="img/legend-of-zelda-2.png">
+						</div>
+					</div>
+				</article>
+				<article>
+					<h3>La propiedad "display"</h3>
+					<p>Podemos modificar el comportamiento que va a tener un elemento dentro de nuestro HTML. Para esto podemos utilizar la propiedad "display". Como modo de ejemplo, le aplicaremos la propiedad "display:block" en la clase "block" a una imagen para que pueda responder al centrado con margenes automáticos</p>
+					<div>
+						<pre>
+							h1 {
+								display: inline-block;
+							}
+						</pre>
+					</div>
+					<div class="example">
+						<p>Le aplicamos la clase "block" y lo centramos con los margenes automáticos.</p>
+						<img class="center-auto block" src="img/legend-of-zelda-4.png">
+						<p>Como la imagen tiene un tamaño especifico que se lo da el tamaño propio de la imagen, el bloque no ocupa toda la pantalla y se comporta como si le ubieramos asignado un width fijo. </p>
+					</div>
+				</article>
+			</section>	
+		</main>
+	</body>
+</html>
+
+
+
+
+
+
+
+
